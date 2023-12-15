@@ -1,0 +1,84 @@
+---
+title: "Funciones para calcular parámetros de los de anualidades."
+author: "Lizzet Mendoza Esteban"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+### -------------------------------------------
+## "Valor Futuro conocido":
+### -------------------------------------------
+
+#### 1.-Cálculo del valor futuro (vF)
+
+$VF=VP*(1+r)^n$. 
+
+
+### 2.-Cálculo de la anualidad para el valor futuro (pagoVF)
+
+$VF=P*((1-(1+r)^-n)/r)$
+
+$P=VF*r/(1-(1+r)^-n)$
+
+
+### 3.-Cálculo de la tasa necesaria, dada una anualidad A, para llegar a un valor futuro (tasaVF)
+
+$VF=A*((1-(1+r)^-n)/r)$
+
+$r=(A/VF)/(1-(1+r)^n)$
+
+
+### 4.-Cálculo del número de periodos, dada una anualidad A, para llegar a un valor futuro (periodosVF)
+
+$VF=A*((1-(1+r)^-n)/r)$
+
+$n=-((log (1-VF*R/A))/(log(1+r)))$
+
+
+### ---------------------------------------------------------
+## "Valor Actual o presente conocido":
+### ---------------------------------------------------------
+### 1.-Cálculo del valor actual (VA)
+
+$VA=VF/(1+r)^n$
+
+### 2.-Cálculo de la anualidad para el valor actual (pagoVA)
+
+$VA=P*(1-(1+r)^-n)/r$
+
+$P=(VA*r)/(1-(1+r)^n)$
+
+### 3.-Cálculo de la tasa necesaria, dada una anualidad A, para llegar a un valor actual (tasaVA)
+
+$VA=(A*(1-(1+r)^-n))/r$
+
+### 4.-Cálculo del número de periodos, dada una anualidad A, para llegar a un valor actual (periodosVA)
+
+$VP=(A*(1-(1+r)^-n))/r$
+
+
+### ---------------------------------------------------
+## "ANUALIDADES DIFERIDAS":
+### ---------------------------------------------------
+
+
+### Ordinarias->
+$VA=((P*(1-(1+r)^-n))/r)*(1+r)^t$
+
+
+### Anticipadas->
+$VA=((P*(1-(1+r)^-n))/r)*(1+r)^t*(1+r)$
+
+t representa el numero de periodos de diferimiento antes de que comiencen los pagos.
+
+Suponen  pagos constntes y tasas de interés contantes a lo largo del tiempo.
+```{r}
+
+```
+
+
+
+```{r}
+
+```
+
